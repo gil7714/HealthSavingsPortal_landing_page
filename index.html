@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Your ACA Subsidy Card Now - HealthSavingsPortal</title>
+    <title>HealthSavingsPortal - Get Your ACA Subsidy Card Now</title>
     <style>
         * {
             box-sizing: border-box;
@@ -144,6 +144,18 @@
         footer a {
             color: #fff;
         }
+        .page {
+            display: none;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .page h1, .page h2 {
+            color: #0056b3;
+        }
+        .page h2 {
+            margin-top: 30px;
+        }
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
@@ -182,63 +194,124 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Get Your ACA Subsidy Card Now!</h1>
-            <p>Unlock Savings on Health Insurance with Your Personalized Subsidy Card</p>
-            <a href="#eligibility-check" class="cta-button">Check Eligibility for Your Subsidy Card</a>
-        </div>
-    </section>
+    <div id="home-page">
+        <section class="hero">
+            <div class="container">
+                <h1>Get Your ACA Subsidy Card Now!</h1>
+                <p>Unlock Savings on Health Insurance with Your Personalized Subsidy Card</p>
+                <a href="#eligibility-check" class="cta-button">Check Eligibility for Your Subsidy Card</a>
+            </div>
+        </section>
 
-    <section class="main-content">
-        <div class="container">
-            <div class="benefits">
-                <div class="benefit-item">
-                    <i class="fas fa-credit-card"></i>
-                    <h3>Subsidy Card</h3>
-                    <p>Access your ACA benefits easily</p>
+        <section class="main-content">
+            <div class="container">
+                <div class="benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Subsidy Card</h3>
+                        <p>Access your ACA benefits easily</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Instant Savings</h3>
+                        <p>Reduce your healthcare costs immediately</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Easy Qualification</h3>
+                        <p>Quick process to get your subsidy card</p>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h3>Instant Savings</h3>
-                    <p>Reduce your healthcare costs immediately</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Easy Qualification</h3>
-                    <p>Quick process to get your subsidy card</p>
+
+                <div id="eligibility-check" class="eligibility-form">
+                    <h2>Check Your Eligibility for a Subsidy Card</h2>
+                    <form id="eligibility-form">
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="income">Annual Income</label>
+                            <input type="number" id="income" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="household">Household Size</label>
+                            <input type="number" id="household" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipcode">Zip Code</label>
+                            <input type="text" id="zipcode" required>
+                        </div>
+                        <button type="submit" class="cta-button">Check Eligibility for Subsidy Card</button>
+                    </form>
+                    <div id="result-message"></div>
                 </div>
             </div>
+        </section>
+    </div>
 
-            <div id="eligibility-check" class="eligibility-form">
-                <h2>Check Your Eligibility for a Subsidy Card</h2>
-                <form id="eligibility-form">
-                    <div class="form-group">
-                        <label for="age">Age</label>
-                        <input type="number" id="age" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="income">Annual Income</label>
-                        <input type="number" id="income" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="household">Household Size</label>
-                        <input type="number" id="household" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="zipcode">Zip Code</label>
-                        <input type="text" id="zipcode" required>
-                    </div>
-                    <button type="submit" class="cta-button">Check Eligibility for Subsidy Card</button>
-                </form>
-                <div id="result-message"></div>
-            </div>
-        </div>
-    </section>
+    <div id="privacy-policy" class="page">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: August 27, 2024</p>
+        
+        <h2>1. Introduction</h2>
+        <p>HealthSavingsPortal ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+        
+        <h2>2. Information We Collect</h2>
+        <p>We collect information that you provide directly to us, such as when you fill out a form or contact us. This may include your name, email address, phone number, and other personal information.</p>
+        
+        <h2>3. How We Use Your Information</h2>
+        <p>We use the information we collect to provide, maintain, and improve our services, to process your requests, and to communicate with you.</p>
+        
+        <h2>4. Information Sharing and Disclosure</h2>
+        <p>We do not sell or rent your personal information to third parties. We may share your information with service providers who assist us in operating our website and conducting our business.</p>
+        
+        <h2>5. Security</h2>
+        <p>We take reasonable measures to help protect your personal information from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction.</p>
+        
+        <h2>6. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+        
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at privacy@healthsavingsportal.com.</p>
+        
+        <p><a href="#" onclick="showPage('home-page'); return false;">Return to Home Page</a></p>
+    </div>
+
+    <div id="terms-of-service" class="page">
+        <h1>Terms of Service</h1>
+        <p>Last updated: August 27, 2024</p>
+        
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using HealthSavingsPortal's website and services, you agree to be bound by these Terms of Service.</p>
+        
+        <h2>2. Use of Services</h2>
+        <p>You agree to use our services only for lawful purposes and in accordance with these Terms of Service.</p>
+        
+        <h2>3. User Accounts</h2>
+        <p>You are responsible for safeguarding the password you use to access our services and for any activities or actions under your account.</p>
+        
+        <h2>4. Intellectual Property</h2>
+        <p>The content, features, and functionality of our website are owned by HealthSavingsPortal and are protected by copyright, trademark, and other intellectual property laws.</p>
+        
+        <h2>5. Disclaimer of Warranties</h2>
+        <p>Our services are provided "as is" without any warranties, expressed or implied.</p>
+        
+        <h2>6. Limitation of Liability</h2>
+        <p>HealthSavingsPortal shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.</p>
+        
+        <h2>7. Changes to Terms</h2>
+        <p>We reserve the right to modify or replace these Terms of Service at any time.</p>
+        
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions about these Terms of Service, please contact us at terms@healthsavingsportal.com.</p>
+        
+        <p><a href="#" onclick="showPage('home-page'); return false;">Return to Home Page</a></p>
+    </div>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 HealthSavingsPortal. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>&copy; 2024 HealthSavingsPortal. All rights reserved. | <a href="#" onclick="showPage('privacy-policy'); return false;">Privacy Policy</a> | <a href="#" onclick="showPage('terms-of-service'); return false;">Terms of Service</a></p>
             <p>Disclaimer: Eligibility for subsidy cards is subject to verification.</p>
         </div>
     </footer>
@@ -259,6 +332,19 @@
             resultMessage.scrollIntoView({ behavior: 'smooth' });
         });
     });
+
+    function showPage(pageId) {
+        // Hide all pages
+        document.querySelectorAll('.page, #home-page').forEach(page => {
+            page.style.display = 'none';
+        });
+
+        // Show the selected page
+        document.getElementById(pageId).style.display = 'block';
+
+        // Scroll to the top of the page
+        window.scrollTo(0, 0);
+    }
     </script>
 </body>
 </html>
