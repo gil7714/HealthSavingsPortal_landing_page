@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSavingsPortal - Get Your $1400/Month ACA Subsidy Now</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230056b3'/%3E%3Cpath d='M50 25 L50 75 M25 50 L75 50' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3Cpath d='M35 65 L65 65' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" sizes="32x32" href="/path/to/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/path/to/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/path/to/apple-touch-icon.png">
+    <link rel="manifest" href="/path/to/site.webmanifest">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+        .cta-button {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cta-button:hover {
+            background: #218838;
+        }
+        .main-cta-button {
+            font-size: 24px;
+            padding: 15px 30px;
+        }
+        .hero {
+            background: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .main-content {
+            background: white;
+            padding: 40px 0;
+        }
+        .benefits {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+        .benefit-item {
+            flex-basis: calc(33.333% - 20px);
+            text-align: center;
+            background-color: #f0f8ff;
+            border: 2px solid #0056b3;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .benefit-item i {
+            font-size: 40px;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        .benefit-item h3 {
+            color: #0056b3;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .benefit-item p {
+            color: #333;
+        }
+        .eligibility-form {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 5px;
+            margin-bottom: 40px;
+        }
+        .eligibility-form h2 {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        #result-message {
+            display: none;
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            color: #3c763d;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 18px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        footer a {
+            color: #fff;
+        }
+        .call-now-button {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .call-now-button:hover {
+            background: #218838;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+            .logo {
+                margin-bottom: 10px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .benefits {
+                flex-direction: column;
+            }
+            .benefit-item {
+                margin-bottom: 20px;
+            }
+            .eligibility-form {
+                padding: 20px;
+            }
+            .main-cta-button {
+                font-size: 20px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1681826409249857');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1681826409249857&ev=PageView&noscript=1"
+    />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">HealthSavingsPortal</div>
+            <a href="tel:18889808035" class="cta-button">Call Now: 1-888-980-8035</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Get Your $1400/Month ACA Subsidy Now!</h1>
+            <p>Unlock Massive Savings on Health Insurance with Your ACA Subsidy</p>
+            <a href="#eligibility-check" class="cta-button main-cta-button">See If You Qualify Now</a>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>$1400 Monthly Subsidy</h3>
+                    <p>Significant savings on your healthcare costs</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Comprehensive Coverage</h3>
+                    <p>Access to quality health insurance plans</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Easy Qualification</h3>
+                    <p>Quick process to check your eligibility</p>
+                </div>
+            </div>
+
+            <div id="eligibility-check" class="eligibility-form">
+                <h2>Check Your Eligibility for the $1400/Month ACA Subsidy</h2>
+                <form id="eligibility-form">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="Enter your age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="income">Annual Income</label>
+                        <input type="number" id="income" placeholder="Enter your annual income" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zipcode">Zip Code</label>
+                        <input type="text" id="zipcode" placeholder="Enter your zip code" required>
+                    </div>
+                    <button type="submit" class="cta-button main-cta-button">See If You Qualify Now</button>
+                </form>
+                <div id="result-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HealthSavingsPortal. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>Disclaimer: Eligibility for ACA subsidies is subject to verification and may vary based on individual circumstances.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const form = document.getElementById('eligibility-form');
+        const resultMessage = document.getElementById('result-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the form from submitting normally
+
+            // Display the result message with a Call Now button
+            resultMessage.style.display = 'block';
+            resultMessage.innerHTML = `
+                You may qualify for the $1400/Month ACA Subsidy!<br>
+                <a href="tel:18889808035" class="call-now-button" onclick="fbq('track', 'Lead');">
+                    Call Now: 1-888-980-8035
+                </a>
+            `;
+
+            // Scroll to the result message
+            resultMessage.scrollIntoView({ behavior: 'smooth' });
+
+            // Facebook Pixel event tracking
+            fbq('track', 'Lead');
+        });
+    });
+    </script>
+</body>
+</html>
